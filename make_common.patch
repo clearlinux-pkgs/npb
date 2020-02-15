@@ -1,0 +1,20 @@
+--- a/NPB3.4-MPI/sys/make.common-org	2020-02-13 10:42:29.000000000 -0800
++++ b/NPB3.4-MPI/sys/make.common	2020-02-13 12:56:24.802488055 -0800
+@@ -8,6 +8,7 @@
+ # to be able to avoid this, but we'd have to get information
+ # from the setparams back to the make program, which isn't easy. 
+ CLASS=U
++.NOTPARALLEL:
+ 
+ default:: ${PROGRAM}
+ 
+--- a/NPB3.4-OMP/sys/make.common-org	2020-02-13 10:42:29.000000000 -0800
++++ b/NPB3.4-OMP/sys/make.common	2020-02-13 12:56:24.802488055 -0800
+@@ -8,6 +8,7 @@
+ # to be able to avoid this, but we'd have to get information
+ # from the setparams back to the make program, which isn't easy. 
+ CLASS=U
++.NOTPARALLEL:
+ 
+ default:: ${PROGRAM}
+ 

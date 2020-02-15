@@ -1,0 +1,2 @@
+npb-run-omp.sh -m 0755 /usr/bin
+npb-run-mpi.sh -m 0755 /usr/bin

@@ -1,0 +1,18 @@
+--- a/dev/null	2020-02-10 12:50:25.157999983 -0800
++++ b/Makefile	2020-02-14 07:46:51.473321986 -0800
+@@ -0,0 +1,15 @@
++SHELL=/bin/sh
++
++DESTDIR=/
++
++default_target: all
++
++all:
++	$(MAKE) CFLAGS="$(CFLAGS) -fopenmp" -C NPB3.4-OMP suite
++	$(MAKE) -C NPB3.4-MPI suite
++
++install:
++	install -d $(DESTDIR)/usr/bin
++	install -m 755 NPB3.4-OMP/bin/* $(DESTDIR)/usr/bin
++	install -d $(DESTDIR)/usr/lib64/openmpi/bin
++	install -m 755 NPB3.4-MPI/bin/* $(DESTDIR)/usr/lib64/openmpi/bin

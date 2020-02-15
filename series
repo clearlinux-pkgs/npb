@@ -1,0 +1,5 @@
+suite_def.patch
+mpi_def.patch
+omp_def.patch
+makefile.patch
+make_common.patch
