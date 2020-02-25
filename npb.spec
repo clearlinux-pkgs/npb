@@ -4,7 +4,7 @@
 #
 Name     : npb
 Version  : 1
-Release  : 2
+Release  : 3
 URL      : https://www.nas.nasa.gov/assets/npb/NPB3.4.tar.gz
 Source0  : https://www.nas.nasa.gov/assets/npb/NPB3.4.tar.gz
 Source1  : npb-run-omp.sh
@@ -48,7 +48,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582662886
+export SOURCE_DATE_EPOCH=1582665246
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -61,7 +61,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1582662886
+export SOURCE_DATE_EPOCH=1582665246
 rm -rf %{buildroot}
 %make_install
 mkdir -p %{buildroot}/usr
